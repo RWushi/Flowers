@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16.2
+    container_name: postgres_db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: flowers
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: s4kUp3Nc1rCl3s&
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  web:
+    build: .
+    volumes:
+      - .:/Flowers
+    ports:
+      - "8001:8000"
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=Flowers.settings
+
+volumes:
+  pgdata:

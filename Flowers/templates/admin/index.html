@@ -1,0 +1,10 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+<h1>Добро пожаловать в административную панель</h1>
+<div>
+    <a href="{% url 'content:index' %}" class="button">Содержимое бота</a>
+    <a href="{% url 'nomenclature:index' %}" class="button">Номенклатура цветов</a>
+</div>
+{{ block.super }}
+{% endblock %}

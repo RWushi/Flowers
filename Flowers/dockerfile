@@ -1,0 +1,10 @@
+FROM python:3.11
+
+WORKDIR /Flowers
+
+COPY requirements.txt /Flowers/
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . /Flowers/
+
+CMD ["sh", "-c", "python VonageQuery.py & python manage.py runserver 0.0.0.0:8000"]
