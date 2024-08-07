@@ -7,9 +7,9 @@ services:
     ports:
       - "5433:5432"
     environment:
-      POSTGRES_DB: flowers
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: s4kUp3Nc1rCl3s&
+      POSTGRES_DB: 
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
     volumes:
       - pgdata:/var/lib/postgresql/data
 
