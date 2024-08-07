@@ -3,7 +3,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'django-insecure-5y8kmmhdc4$phfb5olfyhiew&wu7fj++rm_lo^&j21@h(n0-i!'
+SECRET_KEY = ''
 
 DEBUG = True
 
@@ -55,10 +55,10 @@ WSGI_APPLICATION = 'Flowers.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'flowers',
-        'USER': 'postgres',
-        'PASSWORD': 's4kUp3Nc1rCl3s&',
-        'HOST': 'db',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '5432',
     }
 }
